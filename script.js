@@ -1,3 +1,44 @@
+// Interactive Graph Points - Click to navigate to experience details
+document.querySelectorAll('.timeline-point').forEach(point => {
+    point.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            const offset = 100;
+            const targetPosition = targetElement.offsetTop - offset;
+            
+            // Add highlight effect to target
+            targetElement.style.transition = 'all 0.6s ease';
+            targetElement.style.transform = 'scale(1.02)';
+            targetElement.style.background = 'rgba(233, 69, 96, 0.05)';
+            
+            // Scroll to target
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+            
+            // Remove highlight after animation
+            setTimeout(() => {
+                targetElement.style.transform = 'scale(1)';
+                setTimeout(() => {
+                    targetElement.style.background = '';
+                }, 600);
+            }, 800);
+        }
+    });
+    
+    // Add hover effect sound/haptic feedback simulation
+    point.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.1)';
+    });
+    
+    point.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+    });
+});
+
 // Smooth scroll offset for fixed nav
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

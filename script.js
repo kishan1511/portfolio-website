@@ -1,5 +1,5 @@
-// Interactive Graph Points - Click to navigate to experience details
-document.querySelectorAll('.timeline-point').forEach(point => {
+// Interactive Journey Timeline - Click to navigate to experience details
+document.querySelectorAll('.journey-point').forEach(point => {
     point.addEventListener('click', function() {
         const targetId = this.getAttribute('data-target');
         const targetElement = document.getElementById(targetId);
@@ -28,15 +28,25 @@ document.querySelectorAll('.timeline-point').forEach(point => {
             }, 800);
         }
     });
-    
-    // Add hover effect sound/haptic feedback simulation
-    point.addEventListener('mouseenter', function() {
-        this.style.transform = 'scale(1.1)';
+});
+
+// Animate skill bars on scroll into view
+const skillBarsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const bars = entry.target.querySelectorAll('.skill-bar-fill');
+            bars.forEach((bar, index) => {
+                setTimeout(() => {
+                    bar.style.animationPlayState = 'running';
+                }, index * 100);
+            });
+            skillBarsObserver.unobserve(entry.target);
+        }
     });
-    
-    point.addEventListener('mouseleave', function() {
-        this.style.transform = 'scale(1)';
-    });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.skill-category-new').forEach(category => {
+    skillBarsObserver.observe(category);
 });
 
 // Smooth scroll offset for fixed nav

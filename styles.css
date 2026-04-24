@@ -94,26 +94,6 @@ a {
     gap: 0.95rem;
 }
 
-.header-connect {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 2.85rem;
-    padding: 0 1rem;
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 700;
-    transition: transform var(--transition), background var(--transition);
-}
-
-.header-connect:hover {
-    transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.08);
-}
-
 .brand {
     display: inline-flex;
     align-items: center;
@@ -225,7 +205,6 @@ a {
     font-size: clamp(0.94rem, 1.55vw, 1.08rem);
 }
 
-.graph-point:hover,
 .content-card:hover,
 .experience-card:hover {
     transform: translateY(-2px);
@@ -247,8 +226,7 @@ a {
 
 .section-kicker,
 .card-label,
-.experience-period,
-.graph-copy small {
+.experience-period {
     color: var(--muted);
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -259,134 +237,6 @@ a {
     margin-top: 0.4rem;
     font-size: clamp(1.8rem, 3.3vw, 2.6rem);
     line-height: 1.05;
-}
-
-.graph-card {
-    padding: 1rem;
-    border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
-    background: var(--panel-soft);
-}
-
-.graph-frame {
-    position: relative;
-    height: 38rem;
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.02);
-    overflow: hidden;
-}
-
-.graph-axis {
-    position: absolute;
-    background: rgba(116, 152, 244, 0.38);
-}
-
-.graph-axis span {
-    position: absolute;
-    color: var(--muted);
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-}
-
-.graph-axis-y {
-    left: 6.4%;
-    top: 7%;
-    bottom: 8%;
-    width: 3px;
-}
-
-.graph-axis-y span {
-    left: -0.4rem;
-    top: 0;
-    transform: translate(-100%, 0) rotate(-90deg);
-    transform-origin: top left;
-}
-
-.graph-axis-x {
-    left: 6.4%;
-    right: 5.5%;
-    bottom: 8%;
-    height: 3px;
-}
-
-.graph-axis-x span {
-    right: 0;
-    bottom: -1.7rem;
-}
-
-.experience-curve {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.experience-curve path {
-    fill: none;
-    stroke: #7295ef;
-    stroke-width: 4;
-    stroke-linecap: round;
-    stroke-dasharray: 1450;
-    stroke-dashoffset: 1450;
-    animation: drawCurve 2.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.graph-point {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-radius: 1rem;
-}
-
-.graph-dot {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 0 10px rgba(116, 152, 244, 0.12);
-}
-
-.graph-copy {
-    position: absolute;
-    left: 1.85rem;
-    top: -1rem;
-    width: max-content;
-    max-width: 14rem;
-}
-
-.graph-copy strong {
-    display: block;
-    font-size: 0.98rem;
-    line-height: 1.25;
-}
-
-.graph-copy small {
-    display: block;
-    margin-top: 0.15rem;
-    font-size: 0.7rem;
-}
-
-.point-bachelors { left: 9%; bottom: 12%; }
-.point-frost { left: 29%; bottom: 30%; }
-.point-masters { left: 43%; bottom: 36%; }
-.point-kismet { left: 58%; bottom: 48%; }
-.point-waters { left: 72%; bottom: 64%; }
-.point-florrent { left: 83%; bottom: 82%; }
-
-.point-bachelors .graph-copy {
-    left: 1.65rem;
-    top: -0.9rem;
-}
-
-.point-frost .graph-copy,
-.point-masters .graph-copy,
-.point-kismet .graph-copy,
-.point-waters .graph-copy,
-.point-florrent .graph-copy {
-    left: 1.75rem;
-    top: -1.1rem;
 }
 
 .experience-list,
@@ -413,8 +263,7 @@ a {
     scroll-margin-top: 6rem;
 }
 
-.experience-card:target,
-.experience-card.graph-linked {
+.experience-card:target {
     border-color: rgba(116, 152, 244, 0.44);
     box-shadow: 0 0 0 1px rgba(116, 152, 244, 0.2);
 }
@@ -462,12 +311,6 @@ a {
     color: var(--text);
 }
 
-@keyframes drawCurve {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
 @media (max-width: 920px) {
     .site-header {
         position: relative;
@@ -510,22 +353,6 @@ a {
         grid-template-columns: 1fr;
     }
 
-    .graph-frame {
-        height: 30rem;
-    }
-
-    .graph-point {
-        width: 0;
-        height: 0;
-    }
-
-    .graph-copy strong {
-        font-size: 0.8rem;
-    }
-
-    .graph-copy small {
-        font-size: 0.62rem;
-    }
 }
 
 @media (max-width: 640px) {
@@ -546,12 +373,6 @@ a {
         gap: 0.5rem;
     }
 
-    .header-connect {
-        min-height: 2.5rem;
-        padding: 0 0.8rem;
-        font-size: 0.82rem;
-    }
-
     .nav-link {
         font-size: 0.92rem;
     }
@@ -565,31 +386,4 @@ a {
         padding: 1.15rem;
     }
 
-    .graph-frame {
-        height: 26rem;
-    }
-
-    .graph-point {
-        width: 0;
-        height: 0;
-    }
-
-    .graph-dot {
-        width: 0.86rem;
-        height: 0.86rem;
-        box-shadow: 0 0 0 8px rgba(116, 152, 244, 0.1);
-    }
-
-    .graph-copy {
-        left: 1.35rem;
-        top: -0.8rem;
-        max-width: 7.2rem;
-    }
-
-    .point-bachelors { left: 9%; bottom: 9%; }
-    .point-frost { left: 24%; bottom: 25%; }
-    .point-masters { left: 37%; bottom: 30%; }
-    .point-kismet { left: 51%; bottom: 40%; }
-    .point-waters { left: 63%; bottom: 53%; }
-    .point-florrent { left: 73%; bottom: 69%; }
 }

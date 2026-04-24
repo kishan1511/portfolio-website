@@ -1,7 +1,6 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 const navLinks = document.querySelectorAll(".nav-link");
-const graphPoints = document.querySelectorAll(".graph-point");
 
 if (menuToggle && siteNav) {
     menuToggle.addEventListener("click", () => {
@@ -18,21 +17,5 @@ navLinks.forEach((link) => {
         if (menuToggle) {
             menuToggle.setAttribute("aria-expanded", "false");
         }
-    });
-});
-
-graphPoints.forEach((point) => {
-    point.addEventListener("mouseenter", () => {
-        const selector = point.getAttribute("href");
-        const target = selector ? document.querySelector(selector) : null;
-        if (target) {
-            target.classList.add("graph-linked");
-        }
-    });
-
-    point.addEventListener("mouseleave", () => {
-        document.querySelectorAll(".graph-linked").forEach((item) => {
-            item.classList.remove("graph-linked");
-        });
     });
 });

@@ -162,6 +162,22 @@ a {
     width: min(100%, 900px);
 }
 
+.hero-title-row {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-inline-photo {
+    width: clamp(3.8rem, 6vw, 5rem);
+    height: clamp(3.8rem, 6vw, 5rem);
+    border-radius: 20px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
 .hero-title {
     font-size: clamp(3.4rem, 8vw, 6rem);
     line-height: 0.96;
@@ -380,6 +396,14 @@ a {
     .hero-description,
     .hero-supporting {
         width: 100%;
+    }
+
+    .hero-title-row {
+        gap: 0.75rem;
+    }
+
+    .hero-inline-photo {
+        border-radius: 16px;
     }
 
     .content-section {

@@ -335,11 +335,8 @@ a {
 
 .graph-point {
     position: absolute;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.7rem;
-    max-width: 13rem;
-    padding: 0.2rem;
+    width: 0;
+    height: 0;
     border-radius: 1rem;
 }
 
@@ -349,6 +346,14 @@ a {
     border-radius: 50%;
     background: var(--accent);
     box-shadow: 0 0 0 10px rgba(116, 152, 244, 0.12);
+}
+
+.graph-copy {
+    position: absolute;
+    left: 1.85rem;
+    top: -1rem;
+    width: max-content;
+    max-width: 14rem;
 }
 
 .graph-copy strong {
@@ -363,12 +368,26 @@ a {
     font-size: 0.7rem;
 }
 
-.point-bachelors { left: 9%; bottom: 9%; }
-.point-frost { left: 28%; bottom: 26%; }
-.point-masters { left: 42%; bottom: 31%; }
-.point-kismet { left: 57%; bottom: 42%; }
-.point-waters { left: 70%; bottom: 57%; }
-.point-florrent { left: 81%; bottom: 77%; }
+.point-bachelors { left: 9%; bottom: 12%; }
+.point-frost { left: 29%; bottom: 30%; }
+.point-masters { left: 43%; bottom: 36%; }
+.point-kismet { left: 58%; bottom: 48%; }
+.point-waters { left: 72%; bottom: 64%; }
+.point-florrent { left: 83%; bottom: 82%; }
+
+.point-bachelors .graph-copy {
+    left: 1.65rem;
+    top: -0.9rem;
+}
+
+.point-frost .graph-copy,
+.point-masters .graph-copy,
+.point-kismet .graph-copy,
+.point-waters .graph-copy,
+.point-florrent .graph-copy {
+    left: 1.75rem;
+    top: -1.1rem;
+}
 
 .experience-list,
 .project-grid,
@@ -496,8 +515,8 @@ a {
     }
 
     .graph-point {
-        max-width: 8.3rem;
-        gap: 0.5rem;
+        width: 0;
+        height: 0;
     }
 
     .graph-copy strong {
@@ -551,13 +570,20 @@ a {
     }
 
     .graph-point {
-        max-width: 6.3rem;
+        width: 0;
+        height: 0;
     }
 
     .graph-dot {
         width: 0.86rem;
         height: 0.86rem;
         box-shadow: 0 0 0 8px rgba(116, 152, 244, 0.1);
+    }
+
+    .graph-copy {
+        left: 1.35rem;
+        top: -0.8rem;
+        max-width: 7.2rem;
     }
 
     .point-bachelors { left: 9%; bottom: 9%; }

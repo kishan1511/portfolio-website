@@ -3,399 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishan Waghela | Product Marketing Strategist</title>
+    <title>Kishan Waghela | Product Growth & Marketing Strategy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Cursor Follower -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-content">
-            <a href="#home" class="logo">
-                <span class="logo-text">KW</span>
-            </a>
-            <div class="nav-menu">
-                <a href="#about" class="nav-item">About</a>
-                <a href="#experience" class="nav-item">Experience</a>
-                <a href="#projects" class="nav-item">Projects</a>
-                <a href="#contact" class="nav-item">Contact</a>
-                <a href="Resume_KishanW.pdf" download class="nav-item nav-download">
-                    <span>Resume</span>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="hamburger">
+    <div class="page-shell">
+        <nav class="navbar">
+            <a href="#home" class="brand">KW</a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
                 <span></span>
                 <span></span>
-                <span></span>
+            </button>
+            <div class="nav-links" id="nav-menu">
+                <a href="#summary">Summary</a>
+                <a href="#journey">Journey</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-        </div>
-        
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-label" data-scroll>Chemical Engineer • Strategist • Energy Transition</div>
-                <h1 class="hero-heading" data-scroll>
-                    <span class="line">CHEMICAL ENGINEER</span>
-                    <span class="line">TURNED</span>
-                    <span class="line gradient-text">STRATEGIST</span>
-                </h1>
-                <p class="hero-description" data-scroll>
-                    I am a chemical engineer turned strategist, passionate about the energy transition.
-                    Skilled at <span class="highlight">market research</span>, <span class="highlight">competitive intelligence</span>,
-                    and strategy, I bring a meticulous approach to turning technical complexity into clear
-                    business direction while exploring automations and agentic workflows.
-                </p>
-                <div class="hero-cta" data-scroll>
-                    <a href="#contact" class="btn btn-primary">
-                        <span>Let's Connect</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
+        <main class="layout" id="home">
+            <aside class="sidebar">
+                <div class="sidebar-inner">
+                    <a class="profile-chip" href="https://www.linkedin.com/in/kishan-waghela/" target="_blank" rel="noreferrer">
+                        <div class="profile-photo" aria-hidden="true">
+                            <span>KW</span>
+                        </div>
+                        <div class="profile-copy">
+                            <span class="profile-label">LinkedIn Photo Slot</span>
+                            <strong>Kishan Waghela</strong>
+                        </div>
                     </a>
-                    <a href="#projects" class="btn btn-secondary">
-                        <span>View Work</span>
-                    </a>
-                </div>
-            </div>
-            <div class="hero-stats" data-scroll>
-                <div class="stat-card">
-                    <div class="stat-number">$200K+</div>
-                    <div class="stat-label">Revenue Generated</div>
-                    <div class="stat-bar"></div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">70%</div>
-                    <div class="stat-label">Efficiency Increase</div>
-                    <div class="stat-bar"></div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">20+</div>
-                    <div class="stat-label">Market Reports</div>
-                    <div class="stat-bar"></div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="section-container">
-            <div class="section-header" data-scroll>
-                <span class="section-number">01</span>
-                <h2 class="section-title">ABOUT ME</h2>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-text" data-scroll>
-                    <p class="large-text">
-                        I'm a <span class="gradient-text">Product Marketing Strategist</span> who bridges 
-                        the gap between technical innovation and market opportunity.
-                    </p>
-                    <p>
-                        Currently pursuing my Master's in Engineering Management at UMass Amherst (GPA: 3.85/4.0), 
-                        I combine my Chemical Engineering background with hands-on marketing experience from 
-                        companies like Waters Corporation, florrent, and Frost & Sullivan.
-                    </p>
-                    <p>
-                        My superpower? Translating complex technical features into compelling value propositions 
-                        that drive measurable business growth. Whether it's automating competitive intelligence, 
-                        sizing billion-dollar markets, or crafting executive briefings that close deals—I turn 
-                        data into decisions.
-                    </p>
-                </div>
-                
-                <div class="expertise-grid" data-scroll>
-                    <div class="expertise-card">
-                        <div class="expertise-icon">🎯</div>
-                        <h3>Strategic Intelligence</h3>
-                        <p>Market research, competitive analysis, and TAM/SAM/SOM modeling</p>
+                    <div class="intro-block">
+                        <p class="eyebrow">Product Growth & Marketing Strategy</p>
+                        <h1>I am a chemical engineer turned strategist.</h1>
+                        <p class="intro-text">
+                            Passionate about the energy transition, I bring a meticulous approach to
+                            market research, competitive intelligence, and strategy while exploring
+                            automations and agentic workflows.
+                        </p>
+                        <div class="intro-actions">
+                            <a class="primary-link" href="#contact">Let's connect</a>
+                            <a class="secondary-link" href="Resume_KishanW.pdf" download>Resume</a>
+                        </div>
                     </div>
-                    <div class="expertise-card">
-                        <div class="expertise-icon">⚡</div>
-                        <h3>Tech-Driven Marketing</h3>
-                        <p>Python automation, AI tools, and data visualization for insights</p>
-                    </div>
-                    <div class="expertise-card">
-                        <div class="expertise-icon">📈</div>
-                        <h3>Growth Strategy</h3>
-                        <p>Go-to-market planning, product roadmaps, and revenue optimization</p>
-                    </div>
-                    <div class="expertise-card">
-                        <div class="expertise-icon">✍️</div>
-                        <h3>Content That Converts</h3>
-                        <p>Executive briefings, market reports, and sales enablement materials</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Experience Section -->
-        <section id="experience" class="experience-section">
-        <div class="section-container">
-            <div class="section-header" data-scroll>
-                <span class="section-number">02</span>
-                <h2 class="section-title">EXPERIENCE</h2>
-            </div>
-            
-            <div class="timeline">
-                <div class="timeline-item" data-scroll>
-                    <div class="timeline-year">2025</div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Product Marketing & Operations Manager</h3>
-                            <span class="timeline-company">florrent</span>
+                    <section class="graph-card" aria-labelledby="graph-title">
+                        <div class="graph-header">
+                            <p class="graph-kicker">Career Momentum</p>
+                            <h2 id="graph-title">Experience Over Time</h2>
                         </div>
-                        <div class="timeline-period">Sep 2025 - Dec 2025 • Massachusetts, USA</div>
-                        <ul class="timeline-points">
-                            <li>Automated competitive intelligence for 20+ competitors, reducing research time by 70%</li>
-                            <li>Led market research across Energy Storage, AI Data Centers, and Renewable Energy sectors</li>
-                            <li>Created B2B content including case studies, one-pagers, and technical blog posts</li>
-                        </ul>
-                        <div class="timeline-skills">
-                            <span>Competitive Intelligence</span>
-                            <span>Market Research</span>
-                            <span>AI Automation</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item" data-scroll>
-                    <div class="timeline-year">2025</div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Strategic Marketing Manager</h3>
-                            <span class="timeline-company">Waters Corporation</span>
-                        </div>
-                        <div class="timeline-period">Jun 2025 - Aug 2025 • Delaware, USA</div>
-                        <ul class="timeline-points">
-                            <li>Analyzed Aerospace & Defense market, identifying fastest-growing segments</li>
-                            <li>Shaped go-to-market strategy for MVP products in advanced materials</li>
-                            <li>Performed SWOT analysis steering 5-year product development roadmap</li>
-                        </ul>
-                        <div class="timeline-skills">
-                            <span>Market Analysis</span>
-                            <span>GTM Strategy</span>
-                            <span>Sales Enablement</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item" data-scroll>
-                    <div class="timeline-year">2025</div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Product Growth Manager</h3>
-                            <span class="timeline-company">Kismet Technologies</span>
-                        </div>
-                        <div class="timeline-period">Jan 2025 - Apr 2025 • Florida, USA</div>
-                        <ul class="timeline-points">
-                            <li>Conducted market research in antimicrobial and healthcare segments</li>
-                            <li>Performed TAM/SAM/SOM modeling to validate market entry strategies</li>
-                        </ul>
-                        <div class="timeline-skills">
-                            <span>Product Roadmap</span>
-                            <span>Market Sizing</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="timeline-item" data-scroll>
-                    <div class="timeline-year">2022</div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Market Research Analyst</h3>
-                            <span class="timeline-company">Frost & Sullivan</span>
-                        </div>
-                        <div class="timeline-period">Jun 2022 - Aug 2024 • Mumbai, India</div>
-                        <ul class="timeline-points">
-                            <li>Authored 8+ market reports and 15+ executive briefings generating $200K revenue</li>
-                            <li>Conducted research on Li-ion batteries, plastic recycling, construction chemicals</li>
-                            <li>Advised C-suite executives on supply chain strategies</li>
-                        </ul>
-                        <div class="timeline-skills">
-                            <span>Market Reports</span>
-                            <span>Executive Briefings</span>
-                            <span>Competitive Benchmarking</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                        <div class="graph-frame">
+                            <div class="graph-axis graph-axis-y">
+                                <span>Experience</span>
+                            </div>
+                            <div class="graph-axis graph-axis-x">
+                                <span>Years</span>
+                            </div>
 
-    <!-- Projects Section -->
-        <section id="projects" class="projects-section">
-        <div class="section-container">
-            <div class="section-header" data-scroll>
-                <span class="section-number">03</span>
-                <h2 class="section-title">FEATURED WORK</h2>
-            </div>
-            
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card featured" data-scroll>
-                    <div class="project-number">01</div>
-                    <div class="project-tag">Product Management</div>
-                    <h3 class="project-title">Trade Mate: Student Marketplace</h3>
-                    <p class="project-desc">
-                        Led product strategy for a local marketplace platform connecting international 
-                        students. Implemented WBS/CBS frameworks and user journey mapping to optimize 
-                        navigation and reduce churn.
-                    </p>
-                    <div class="project-metrics">
-                        <div class="metric">
-                            <span class="metric-label">Timeline</span>
-                            <span class="metric-value">4 Months</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-label">Role</span>
-                            <span class="metric-value">Product Manager</span>
-                        </div>
-                    </div>
-                    <div class="project-tech">
-                        <span>Product Strategy</span>
-                        <span>User Research</span>
-                        <span>Agile/Scrum</span>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="project-card" data-scroll>
-                    <div class="project-number">02</div>
-                    <div class="project-tag">Automation</div>
-                    <h3 class="project-title">AI Competitive Intelligence</h3>
-                    <p class="project-desc">
-                        Built automated system tracking 20+ competitors in energy storage using 
-                        Python, AI, and web scraping.
-                    </p>
-                    <div class="impact-highlight">
-                        <span class="impact-number">70%</span>
-                        <span>Time Reduction</span>
-                    </div>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>Web Scraping</span>
-                        <span>AI/ML</span>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project-card" data-scroll>
-                    <div class="project-number">03</div>
-                    <div class="project-tag">Market Research</div>
-                    <h3 class="project-title">Strategic Research Portfolio</h3>
-                    <p class="project-desc">
-                        Authored 8+ market reports and 15+ executive briefings across battery 
-                        materials, recycling, and chemicals markets.
-                    </p>
-                    <div class="impact-highlight">
-                        <span class="impact-number">$200K+</span>
-                        <span>Revenue</span>
-                    </div>
-                    <div class="project-tech">
-                        <span>Market Sizing</span>
-                        <span>Forecasting</span>
-                        <span>Analysis</span>
-                    </div>
-                </div>
-                
-                <!-- Project 4 -->
-                <div class="project-card" data-scroll>
-                    <div class="project-number">04</div>
-                    <div class="project-tag">Strategy</div>
-                    <h3 class="project-title">Healthcare Market Entry</h3>
-                    <p class="project-desc">
-                        Comprehensive TAM/SAM/SOM analysis for antimicrobial segment with 
-                        go-to-market recommendations.
-                    </p>
-                    <div class="project-tech">
-                        <span>Market Sizing</span>
-                        <span>GTM Strategy</span>
-                        <span>Excel Modeling</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                            <svg class="experience-curve" viewBox="0 0 520 360" aria-hidden="true">
+                                <path d="M52 312 C118 280 170 256 226 246 C300 232 350 190 394 146 C434 106 464 64 484 24" />
+                            </svg>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="section-container">
-            <div class="contact-content" data-scroll>
-                <div class="contact-header">
-                    <span class="section-number">04</span>
-                    <h2 class="section-title">LET'S WORK<br>TOGETHER</h2>
-                </div>
-                
-                <div class="contact-info">
-                    <a href="mailto:kwaghela@umass.edu" class="contact-link">
-                        <span class="contact-label">Email</span>
-                        <span class="contact-value">kwaghela@umass.edu</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                    
-                    <a href="https://www.linkedin.com/in/kishan-waghela" target="_blank" class="contact-link">
-                        <span class="contact-label">LinkedIn</span>
-                        <span class="contact-value">kishan-waghela</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                    
-                    <div class="contact-link">
-                        <span class="contact-label">Phone</span>
-                        <span class="contact-value">+1 413 510 7612</span>
-                    </div>
-                    
-                    <div class="contact-link">
-                        <span class="contact-label">Location</span>
-                        <span class="contact-value">Open to Relocation</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                            <a class="graph-point point-bachelors" href="#bachelors">
+                                <span class="graph-dot"></span>
+                                <span class="graph-caption">
+                                    <strong>Bachelor's</strong>
+                                    <small>2018 - 2022</small>
+                                </span>
+                            </a>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-left">
-                <span class="logo-text">KW</span>
-                <p>Product Marketing Strategist</p>
-            </div>
-            <div class="footer-right">
-                <p>&copy; 2025 Kishan Waghela. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+                            <a class="graph-point point-frost" href="#frost">
+                                <span class="graph-dot"></span>
+                                <span class="graph-caption">
+                                    <strong>Frost & Sullivan</strong>
+                                    <small>2022 - 2024</small>
+                                </span>
+                            </a>
+
+                            <a class="graph-point point-masters" href="#masters">
+                                <span class="graph-dot"></span>
+                                <span class="graph-caption">
+                                    <strong>MSEM</strong>
+                                    <small>2024 - 2026</small>
+                                </span>
+                            </a>
+
+                            <a class="graph-point point-kismet" href="#kismet">
+                                <span class="graph-dot"></span>
+                                <span class="graph-caption">
+                                    <strong>Kismet</strong>
+                                    <small>Jan 2025 - Apr 2025</small>
+                                </span>
+                            </a>
+
+                            <a class="graph-point point-waters" href="#waters">
+                                <span class="graph-dot"></span>
+                                <span class="graph-caption">
+                                    <strong>Waters</strong>
+                                    <small>Jun 2025 - Aug 2025</small>
+                                </span>
+                            </a>
+
+                            <a class="graph-point point-florrent" href="#florrent">
+                                <span class="graph-dot"></span>
+                                <span class="graph-caption">
+                                    <strong>florrent</strong>
+                                    <small>Sep 2025 - Dec 2025</small>
+                                </span>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </aside>
+
+            <section class="content-column">
+                <section class="content-section summary-section" id="summary">
+                    <div class="section-intro">
+                        <p class="section-tag">Summary</p>
+                        <h2>Growth-minded strategy with technical depth.</h2>
+                    </div>
+                    <div class="summary-grid">
+                        <article class="summary-card">
+                            <h3>What I do best</h3>
+                            <p>
+                                I connect technical products to market opportunities through research,
+                                positioning, and execution that teams can actually use.
+                            </p>
+                        </article>
+                        <article class="summary-card">
+                            <h3>Where I focus</h3>
+                            <p>
+                                Energy transition, advanced materials, market intelligence, and the
+                                systems that make growth decisions faster and sharper.
+                            </p>
+                        </article>
+                        <article class="summary-card stat-card">
+                            <span class="stat-number">$200K+</span>
+                            <span class="stat-copy">Revenue influenced through strategic research and executive briefs.</span>
+                        </article>
+                        <article class="summary-card stat-card">
+                            <span class="stat-number">70%</span>
+                            <span class="stat-copy">Research-time reduction through automation and competitive intelligence workflows.</span>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="content-section journey-section" id="journey">
+                    <div class="section-intro">
+                        <p class="section-tag">Journey</p>
+                        <h2>Education and experience, mapped to growth.</h2>
+                    </div>
+
+                    <div class="journey-list">
+                        <article class="journey-card" id="bachelors">
+                            <span class="journey-year">2018 - 2022</span>
+                            <div>
+                                <h3>Bachelor's in Chemical Engineering</h3>
+                                <p>Built the technical foundation that shaped how I solve product, process, and market problems.</p>
+                            </div>
+                        </article>
+
+                        <article class="journey-card" id="frost">
+                            <span class="journey-year">2022 - 2024</span>
+                            <div>
+                                <h3>Market Research Analyst, Frost & Sullivan</h3>
+                                <p>Authored market reports and executive briefings across batteries, recycling, and chemicals while advising leaders on supply chain and growth strategy.</p>
+                            </div>
+                        </article>
+
+                        <article class="journey-card" id="masters">
+                            <span class="journey-year">2024 - 2026</span>
+                            <div>
+                                <h3>Master's in Engineering Management, UMass Amherst</h3>
+                                <p>Deepened the bridge between engineering, business strategy, and decision-making with a current focus on product growth and systems thinking.</p>
+                            </div>
+                        </article>
+
+                        <article class="journey-card" id="kismet">
+                            <span class="journey-year">Jan 2025 - Apr 2025</span>
+                            <div>
+                                <h3>Product Growth Manager, Kismet Technologies</h3>
+                                <p>Ran TAM, SAM, and SOM analysis for healthcare and antimicrobial markets to validate entry strategy and roadmap direction.</p>
+                            </div>
+                        </article>
+
+                        <article class="journey-card" id="waters">
+                            <span class="journey-year">Jun 2025 - Aug 2025</span>
+                            <div>
+                                <h3>Strategic Marketing Manager, Waters Corporation</h3>
+                                <p>Supported advanced materials go-to-market planning with aerospace and defense market analysis, MVP recommendations, and SWOT-based roadmap input.</p>
+                            </div>
+                        </article>
+
+                        <article class="journey-card" id="florrent">
+                            <span class="journey-year">Sep 2025 - Dec 2025</span>
+                            <div>
+                                <h3>Product Marketing & Operations Manager, florrent</h3>
+                                <p>Built competitive intelligence automation, researched energy storage and renewables, and created B2B content that made technical value easier to sell.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="content-section projects-section" id="projects">
+                    <div class="section-intro">
+                        <p class="section-tag">Selected Work</p>
+                        <h2>Projects that complement the strategy work.</h2>
+                    </div>
+                    <div class="project-grid">
+                        <article class="project-card">
+                            <span class="project-type">Product Strategy</span>
+                            <h3>Trade Mate Marketplace</h3>
+                            <p>Led planning for a marketplace for international students with user journeys, prioritization, and structured delivery frameworks.</p>
+                        </article>
+                        <article class="project-card">
+                            <span class="project-type">Automation</span>
+                            <h3>AI Competitive Intelligence</h3>
+                            <p>Built a workflow that tracked 20+ competitors and accelerated research for fast-moving energy markets.</p>
+                        </article>
+                        <article class="project-card">
+                            <span class="project-type">Research</span>
+                            <h3>Executive Research Portfolio</h3>
+                            <p>Produced insight-led market reports and briefs that supported strategic decisions and commercial conversations.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="content-section contact-section" id="contact">
+                    <div class="section-intro">
+                        <p class="section-tag">Contact</p>
+                        <h2>Open to growth, strategy, and energy-transition conversations.</h2>
+                    </div>
+                    <div class="contact-grid">
+                        <a href="mailto:kwaghela@umass.edu" class="contact-card">
+                            <span>Email</span>
+                            <strong>kwaghela@umass.edu</strong>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kishan-waghela/" target="_blank" rel="noreferrer" class="contact-card">
+                            <span>LinkedIn</span>
+                            <strong>kishan-waghela</strong>
+                        </a>
+                        <div class="contact-card">
+                            <span>Phone</span>
+                            <strong>+1 413 510 7612</strong>
+                        </div>
+                        <div class="contact-card">
+                            <span>Location</span>
+                            <strong>Amherst, MA</strong>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
